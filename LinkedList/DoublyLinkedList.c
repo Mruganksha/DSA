@@ -59,6 +59,7 @@ struct Node* insertBegin(struct Node* head, int data){
 	return nn;
 }
 
+//insertion at end
 struct Node* insertEnd(struct Node *head, int new_data) {
     struct Node *new_node = createNode(new_data);
 
@@ -77,6 +78,8 @@ struct Node* insertEnd(struct Node *head, int new_data) {
     return head;
 }
 
+
+
 int main() {
     struct Node* head = createNode(1);
     struct Node* second = createNode(2);
@@ -92,6 +95,10 @@ int main() {
     
     printf("Backward Traversal: ");
     backwardTraversal(third);
+    
+    int data = 1;
+    head = insertAtFront(head, data);
+    head = insertEnd(head, 4);
 
     return 0;
 }
